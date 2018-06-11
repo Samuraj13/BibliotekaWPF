@@ -7,14 +7,14 @@
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              xmlns:Models="clr-namespace:BibliotekaWPF.Models" xmlns:BibliotekaWPF="clr-namespace:BibliotekaWPF" x:Class="BibliotekaWPF.Views.UsersView"
              mc:Ignorable="d" 
-             d:DesignWidth="900" Height="420" Background="Yellow">
+             d:DesignWidth="auto" Height="auto" Background="Yellow" MinHeight="250" MinWidth="600" >
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <ScrollViewer  VerticalScrollBarVisibility="Auto" Height="Auto">
-            <DataGrid x:Name="Users" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="380">
+            <DataGrid x:Name="Users" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="auto">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="User Name" Binding="{Binding FullName}"/>
                     <DataGridTextColumn Header="Birth Date" Binding="{Binding BirthTime}"/>
@@ -49,6 +49,6 @@
             </DataGrid>
         </ScrollViewer>
         <Button Grid.Row="1" Content="Add User" x:Name="LoadAddUserPage" HorizontalAlignment="Left"/>
-        <Button Grid.Row="1" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" Margin="53,0,0,0" AutomationProperties.AccessKey="Enter"/>
+        <Button Grid.Row="1" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" Margin="95,0,0,0" AutomationProperties.AccessKey="Enter"/>
     </Grid>
 </UserControl>

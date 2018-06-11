@@ -5,34 +5,34 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BibliotekaWPF.Views"
       mc:Ignorable="d" 
-      Title="HomeView" Height="500" Width="1200" 
-        Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+      Title="HomeView" Height="500" Width="1200" MinHeight="250" MinWidth="600" 
+        Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
         <!-- Row 1 -->
-        <Button x:Name="LoadUsersPage" Grid.Row="1" Grid.Column="2">Users</Button>
-        <Button x:Name="LoadBooksPage" Grid.Row="1" Grid.Column="3">Books</Button>
-        <Button x:Name="LoadBorrowsPage" Grid.Row="1" Grid.Column="4">Borrows</Button>
-        <Button x:Name="LoadReportsPage" Grid.Row="1" Grid.Column="5">Reports</Button>
+        <Button x:Name="LoadUsersPage" Grid.Row="1" Grid.Column="3">Users</Button>
+        <Button x:Name="LoadBooksPage" Grid.Row="1" Grid.Column="4">Books</Button>
+        <Button x:Name="LoadBorrowsPage" Grid.Row="1" Grid.Column="5">Borrows</Button>
+        <Button x:Name="LoadReportsPage" Grid.Row="1" Grid.Column="6">Reports</Button>
 
 
         <!-- Row 2 -->
-        <ContentControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" x:Name="ActiveItem" Margin="0"/>
+        <ContentControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" x:Name="ActiveItem" Margin="0"/>
     </Grid>
 </Window>

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              xmlns:views="clr-namespace:BibliotekaWPF.Views"
              xmlns:cal="http://www.caliburnproject.org"
-             mc:Ignorable="d"  d:DesignWidth="900" Height="420" Background="Green">
+             mc:Ignorable="d"  d:DesignWidth="900" Height="420" Background="Green" MinHeight="250" MinWidth="600" >
     
 
     <Grid>

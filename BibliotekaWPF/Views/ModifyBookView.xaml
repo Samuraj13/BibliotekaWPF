@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         mc:Ignorable="d"
-      Title="ModifyBookView" ResizeMode="NoResize" Height="300" Width="400" x:Name="ModifyBookPage" Background="Red" WindowStartupLocation="CenterScreen">
+      Title="ModifyBookView"  MinHeight="300" MinWidth="400" Height="300" Width="400" x:Name="ModifyBookPage" Background="Red" WindowStartupLocation="CenterScreen">
     <Grid Margin="10,10,10,10">
         <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">Title</TextBlock>
         <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Author</Label>
@@ -18,8 +18,8 @@
         <DatePicker x:Name="ReleaseDate" HorizontalAlignment="Left" Height="23" Margin="140,56,0,0" VerticalAlignment="Top" Width="206"/>
         <TextBox x:Name="ISBN" HorizontalAlignment="Left" Height="23" Margin="140,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
         <TextBox x:Name="Count" HorizontalAlignment="Left" Height="23" Margin="140,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <Button x:Name="Modify" Content="Update" Margin="40,153,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsDefault="True"/>
-        <Button x:Name="Close" Content="Cancel" Margin="40,178,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsCancel="True"/>
+        <Button x:Name="Modify" Content="Update" Margin="5,35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Height="auto" IsDefault="True"/>
+        <Button x:Name="Close" Content="Cancel" Margin="5,5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Height="auto" IsCancel="True"/>
         <TextBlock HorizontalAlignment="Left" Margin="140,155,0,0" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="96" Width="206"/>
         <ComboBox ItemsSource="{Binding BookGenres}"
                   SelectedItem="{Binding SelectedBookGenre, Mode=TwoWay}"

@@ -5,32 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         mc:Ignorable="d"
-        Title="Details" Height="300" Width="800" Background="Yellow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Details" Height="auto" MinHeight="250" Width="auto" MinWidth="600" Background="Yellow" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition  Height="40"/>
+            <RowDefinition  Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" MaxWidth="80"/>
             <ColumnDefinition Width="auto" MaxWidth="300"/>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Details" FontWeight="Bold" FontSize="14"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="First Name" FontWeight="Bold" FontSize="14"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Last Name" FontWeight="Bold" FontSize="14"/>
-        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Birth Date" FontWeight="Bold" FontSize="14"/>
-        <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="E-Mail" FontWeight="Bold" FontSize="14"/>
-        <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Phone" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Details" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="First Name" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Last Name" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Last Name" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Birth Date" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="E-Mail" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="2" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Phone" FontWeight="Bold" FontSize="14"/>
 
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="FirstName"  FontSize="14"/>
         <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LastName"  FontSize="14"/>
@@ -38,14 +39,14 @@
         <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Email"  FontSize="14" TextWrapping="Wrap"/>
         <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Phone"  FontSize="14"/>
 
-        <TextBlock Grid.Row="0" Grid.Column="3"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Actual borrowed" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="5" Grid.Row="0" Grid.Column="3"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Actual borrowed" FontWeight="Bold" FontSize="14"/>
         <DataGrid x:Name="ActualBorrows" Grid.Column="3"  Grid.Row="1" Grid.RowSpan="6" AutoGenerateColumns="false" IsReadOnly="true">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding BookTitle}"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <TextBlock Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Borrows history" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Margin="5" Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Borrows history" FontWeight="Bold" FontSize="14"/>
         <DataGrid x:Name="HistoryBorrows" Grid.Column="4"  Grid.Row="1" Grid.RowSpan="6" AutoGenerateColumns="False" IsReadOnly="true">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding BookTitle}"/>
@@ -54,7 +55,7 @@
         </DataGrid>
         
        
-        <Button x:Name="DetailsClose" Content="Cancel" Grid.Column="3" Grid.Row="7" Width="80" Height="20" HorizontalAlignment="Right" Margin="0,2,20,3" IsCancel="True"/>
+        <Button x:Name="DetailsClose" Content="Cancel" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="7" Width="auto" Height="auto" Margin="5" HorizontalAlignment="Center"  IsCancel="True"/>
 
 
 
