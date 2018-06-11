@@ -1,0 +1,39 @@
+﻿<Window x:Class="BibliotekaWPF.Views.AddBookView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BibliotekaWPF.Views"
+        mc:Ignorable="d"
+        Title="AddBookView" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddBookPage" Background="Red" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10,10,10,10">
+        <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">Title</TextBlock>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Author</Label>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,56,234,149">Release Date</Label>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,79,234,126">ISBN</Label>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,102,234,101">Count</Label>
+        <TextBox x:Name="Title" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="Author" HorizontalAlignment="Left" Height="23" Margin="140,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <DatePicker x:Name="ReleaseDate" HorizontalAlignment="Left" Height="23" Margin="140,56,0,0" VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="ISBN" HorizontalAlignment="Left" Height="23" Margin="140,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="Count" HorizontalAlignment="Left" Height="23" Margin="140,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <Button x:Name="AddNewBook" Content="Add" Margin="40,153,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsDefault="True"/>
+        <Button x:Name="Close" Content="Cancel" Margin="40,178,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsCancel="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="140,155,0,0" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="96" Width="206"/>
+        <ComboBox ItemsSource="{Binding BookGenres}"
+                  SelectedItem="{Binding SelectedBookGenre, Mode=TwoWay}"
+                  Width="120"  
+                  HorizontalAlignment="Left"   
+                  Margin="140,125,0,0"   
+                  VerticalAlignment="Top"  >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,125,234,98" Content="Genre"/>
+    </Grid>
+</Window>

@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="BibliotekaWPF.Views.BooksView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
+             xmlns:local="clr-namespace:BibliotekaWPF.Views"
+             mc:Ignorable="d" 
+             d:DesignWidth="900" Height="420" Background="Red">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer  VerticalScrollBarVisibility="Auto" Height="Auto">
+            <DataGrid x:Name="Books" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="380">            
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding BookGenreName}"/>
+                    <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate}"/>
+                    <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}"/>
+                    <DataGridTextColumn Header="Count" Binding="{Binding Count}"/>
+                    <DataGridTextColumn Header="Add Date" Binding="{Binding AddDate}"/>
+                    <DataGridTextColumn Header="Modified Date" Binding="{Binding ModifiedDate}"/>
+                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Details" x:Name="LoadDetailsBookPage" cal:Message.Attach="LoadDetailsBookPage($this)" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                    <DataGridTemplateColumn >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" x:Name="LoadModifyBookPage" cal:Message.Attach="LoadModifyBookPage($this)"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+        <Button Grid.Row="1" Content="Add Book" x:Name="LoadAddBookPage" HorizontalAlignment="Left"/>
+        <Button Grid.Row="1" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" Margin="53,0,0,0" AutomationProperties.AccessKey="Enter"/>
+    </Grid>
+</UserControl>

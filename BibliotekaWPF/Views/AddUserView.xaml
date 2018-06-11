@@ -1,0 +1,26 @@
+﻿<Window x:Class="BibliotekaWPF.Views.AddUserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BibliotekaWPF.Views"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Add new user" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddUserPage" Background="Yellow" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10,10,10,10">
+        <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">First Name</TextBlock>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Last Name</Label>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,56,234,149">Birth Date</Label>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,79,234,126">Email</Label>
+        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,102,234,101" Background="{x:Null}">Phone (Not required)</Label>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="23" Margin="140,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <DatePicker x:Name="BirthTime" HorizontalAlignment="Left" Height="23" Margin="140,56,0,0" VerticalAlignment="Top" Width="206" FirstDayOfWeek="Monday" DisplayDateStart="1753-01-01"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="140,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="Phone" HorizontalAlignment="Left" Height="23" Margin="140,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <Button x:Name="Add" Content="Add" Margin="40,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsDefault="True"/>
+        <Button x:Name="Close" Content="Cancel" Margin="40,155,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsCancel="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="140,130,0,0" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="121" Width="206"/>
+
+    </Grid>
+</Window>
