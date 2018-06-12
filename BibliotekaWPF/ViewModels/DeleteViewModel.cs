@@ -12,7 +12,7 @@ using System.Windows;
 
 namespace BibliotekaWPF.ViewModels
 {
-    public class DeleteViewModel : Window
+    public class DeleteViewModel : Screen
     {
         int _id;
         public DeleteViewModel(int id)
@@ -23,13 +23,13 @@ namespace BibliotekaWPF.ViewModels
         public void DeleteAccept()
         {
             UserServices.Delete(_id);
-            this.Close();
+            TryClose();
 
         }
 
         public void DeleteDiscard()
         {
-            this.Close();
+            TryClose();
         }
     }
 }

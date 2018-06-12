@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using Caliburn.Micro;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace BibliotekaWPF.Views
     /// <summary>
     /// Interaction logic for DeleteView.xaml
     /// </summary>
-    public partial class DeleteView : MetroWindow
+    public partial class DeleteView : Window
     {
         public DeleteView()
         {

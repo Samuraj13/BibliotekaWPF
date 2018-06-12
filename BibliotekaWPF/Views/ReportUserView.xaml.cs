@@ -24,5 +24,14 @@ namespace BibliotekaWPF.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var pd = new PrintDialog();
+            var result = pd.ShowDialog();
+            if (result.HasValue && result.Value)
+                pd.PrintVisual(NumberOfBorrowsPerUser, "My WPF printing a DataGrid");
+        }
+        
     }
 }
