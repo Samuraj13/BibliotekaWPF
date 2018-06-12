@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Add new user" MinHeight="300" MinWidth="400" Height="300" Width="405" x:Name="AddUserPage" Background="Yellow" WindowStartupLocation="CenterScreen">
+        Title="Add new user" MinHeight="300" MinWidth="450" Height="300" Width="405" x:Name="AddUserPage" WindowStartupLocation="CenterScreen"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"  />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -22,20 +23,20 @@
             <ColumnDefinition Width="130*" />
             <ColumnDefinition Width="293*" />
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,0,0,93">First Name</Label>
-        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,23,0,70">Last Name</Label>
-        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,46,0,47" >Birth Date</Label>
-        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,69,0,24" >Email</Label>
-        <Label Grid.Column="0" Foreground="Black" Padding="2" MinWidth="120" FontSize="12" Background="{x:Null}" Margin="5,92,0,0">Phone (Not required)</Label>
-        <Button Grid.Column="0" x:Name="Add" Content="Add" VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" Height="auto" IsDefault="True" Margin="10,30,0,-47" Grid.Row="7"/>
-        <Button Grid.Column="0" x:Name="Close" Content="Cancel"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" Height="auto" IsCancel="True" Margin="10,63,0,-87" Grid.Row="7"/>
-        <TextBox Grid.Column="1" x:Name="FirstName" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
-        <TextBox Grid.Column="1" x:Name="LastName" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Margin="0,23,0,0"/>
-        <DatePicker Grid.Column="1"  x:Name="BirthTime" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="206" FirstDayOfWeek="Monday" DisplayDateStart="1753-01-01" Margin="0,46,0,0"/>
-        <TextBox Grid.Column="1" x:Name="Email" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Margin="0,69,0,0"/>
-        <TextBox Grid.Column="1" x:Name="Phone" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Margin="0,92,0,0"/>
+        <Label Grid.Column="0" Grid.Row="0" Padding="2"  FontSize="12" Margin="5">First Name</Label>
+        <Label Grid.Column="0" Grid.Row="1" Padding="2"  FontSize="12" Margin="5">Last Name</Label>
+        <Label Grid.Column="0" Grid.Row="2" Padding="2"  FontSize="12" Margin="5" >Birth Date</Label>
+        <Label Grid.Column="0" Grid.Row="3" Padding="2"  FontSize="12" Margin="5" >Email</Label>
+        <Label Grid.Column="0" Grid.Row="4" Padding="2"  FontSize="12" Margin="5">Phone (Not required)</Label>
+        <TextBox Grid.Column="1" Grid.Row="0" x:Name="FirstName" Margin="5" />
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="LastName" Margin="5"/>
+        <DatePicker Grid.Column="1" Grid.Row="2"  x:Name="BirthTime" FirstDayOfWeek="Monday" DisplayDateStart="1753-01-01" Margin="5"/>
+        <TextBox Grid.Column="1" Grid.Row="3" x:Name="Email" Margin="5" /> 
+        <TextBox Grid.Column="1" Grid.Row="4" x:Name="Phone" Margin="5" />
+        <Button Grid.Column="0" x:Name="Add" Content="Add" Width="73" Height="auto" IsDefault="True" Margin="5" Grid.Row="5"/>
+        <Button Grid.Column="0" x:Name="Close" Content="Cancel"  Width="73" Height="auto" IsCancel="True" Margin="5" Grid.Row="6"/>
 
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left"  TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="124" Width="206" Margin="0,1,0,-118" Grid.Row="7"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left"  TextWrapping="Wrap" x:Name="Error" Margin="5" Grid.Row="5" Grid.RowSpan="2"/>
 
 
 

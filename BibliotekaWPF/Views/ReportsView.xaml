@@ -6,17 +6,17 @@
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              xmlns:views="clr-namespace:BibliotekaWPF.Views"
              xmlns:cal="http://www.caliburnproject.org"
-             mc:Ignorable="d"  d:DesignWidth="900" Height="420" MinHeight="250" MinWidth="600"
+             mc:Ignorable="d"  d:DesignWidth="900" Height="Auto" MinHeight="250" MinWidth="600"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
     
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" MinHeight="400"/>
         </Grid.RowDefinitions>
-        <ContentControl Grid.Row="0" x:Name="ReportBookPage"/>
-        <ContentControl Grid.Row="1" x:Name="ReportUserPage"/>
+        <ContentControl Grid.Row="0" x:Name="ReportBookPage" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+        <ContentControl Grid.Row="1" x:Name="ReportUserPage" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
     </Grid>
 </UserControl>

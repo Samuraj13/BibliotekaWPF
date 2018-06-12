@@ -9,20 +9,20 @@
                    GlowBrush="{DynamicResource AccentColorBrush}"
                    BorderThickness="1"
       mc:Ignorable="d" 
-      Title="HomeView" Height="500" Width="1200" MinHeight="250" MinWidth="600" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen"
+      Title="HomeView" Height="900" Width="1600" MinHeight="250" MinWidth="600" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" WindowState="Maximized" 
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -31,7 +31,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!-- Row 1 -->
-        <Button x:Name="LoadStylePage" Grid.Row="1" Grid.Column="1" Width="auto" HorizontalAlignment="Right">Styles</Button>
+        <Button x:Name="LoadStylePage" Grid.Row="1" Grid.Column="6">Styles</Button>
         <Button x:Name="LoadUsersPage" Grid.Row="1" Grid.Column="2">Users</Button>
         <Button x:Name="LoadBooksPage" Grid.Row="1" Grid.Column="3">Books</Button>
         <Button x:Name="LoadBorrowsPage" Grid.Row="1" Grid.Column="4">Borrows</Button>

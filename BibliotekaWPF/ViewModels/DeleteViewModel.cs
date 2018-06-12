@@ -23,7 +23,7 @@ namespace BibliotekaWPF.ViewModels
         public void DeleteAccept()
         {
             UserServices.Delete(_id);
-            TryClose();
+            this.Close();
 
         }
 
