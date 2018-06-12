@@ -8,38 +8,53 @@
       Title="ModifyBookView" ResizeMode="NoResize" Height="300" Width="400" x:Name="ModifyBookPage" WindowStartupLocation="CenterScreen"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
-    <Grid Margin="10,10,10,10">
-        <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">Title</TextBlock>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Author</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,56,234,149">Release Date</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,79,234,126">ISBN</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,102,234,101">Count</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,125,234,98" Content="Genre"/>
-        <TextBox x:Name="Title" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
-        <TextBox x:Name="Author" HorizontalAlignment="Left" Height="23" Margin="140,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <DatePicker x:Name="ReleaseDate" HorizontalAlignment="Left" Height="23" Margin="140,56,0,0" VerticalAlignment="Top" Width="206"/>
-        <TextBox x:Name="ISBN" HorizontalAlignment="Left" Height="23" Margin="140,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <TextBox x:Name="Count" HorizontalAlignment="Left" Height="23" Margin="140,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <Button x:Name="Modify" Content="Update" Margin="5,35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Height="auto" IsDefault="True"/>
-        <Button x:Name="Close" Content="Cancel" Margin="5,5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Height="auto" IsCancel="True"/>
-        <TextBlock HorizontalAlignment="Left" Margin="140,155,0,0" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="96" Width="206"/>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"  />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*" />
+            <ColumnDefinition Width="293*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Padding="2"  FontSize="12" Margin="5"   >Title</TextBlock>
+        <Label Grid.Column="0" Grid.Row="1"  Padding="2"  FontSize="12" Margin="5"  >Author</Label>
+        <Label Grid.Column="0" Grid.Row="2"  Padding="2"  FontSize="12" Margin="5" >Release Date</Label>
+        <Label Grid.Column="0" Grid.Row="3"  Padding="2"  FontSize="12" Margin="5" >ISBN</Label>
+        <Label Grid.Column="0" Grid.Row="4"  Padding="2"  FontSize="12" Margin="5" >Count</Label>
+        <TextBox Grid.Column="1" Grid.Row="0" x:Name="Title"  Margin="5,5,5,0" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.RowSpan="2" />
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="Author"  Margin="5,5,5,0"  TextWrapping="Wrap" VerticalAlignment="Top" />
+        <DatePicker Grid.Column="1" Grid.Row="2" x:Name="ReleaseDate"  Margin="5,5,5,0"  VerticalAlignment="Top" />
+        <TextBox Grid.Column="1" Grid.Row="3" x:Name="ISBN" Height="23" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox Grid.Column="1" Grid.Row="4" x:Name="Count"  Height="23" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <Button Grid.Column="0" Grid.Row="6" x:Name="Modify" Content="Update" Margin="5" VerticalAlignment="Bottom" Width="80" Height="auto" IsDefault="True"/>
+        <Button Grid.Column="0" Grid.Row="7" x:Name="Close" Content="Cancel" Margin="5" VerticalAlignment="Bottom"  Width="80" Height="auto" IsCancel="True"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Width="206" Grid.RowSpan="2"/>
         <ComboBox ItemsSource="{Binding BookGenres}"
                   SelectedItem="{Binding SelectedBookGenre, Mode=TwoWay}"
                   SelectedIndex="{Binding ActualGenre}"
                   Width="120"  
-                  HorizontalAlignment="Left"   
-                  Margin="140,125,0,0"   
-                  VerticalAlignment="Top"  >
+                  HorizontalAlignment="Left"     
+                  VerticalAlignment="Top" 
+                  Margin="5,5,0,0"
+                  Grid.Column="1"
+                  Grid.Row="5" >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding BookGenreId}"/>
-                        <TextBlock Text=" - "/>
                         <TextBlock Text="{Binding Name}"/>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+        <Label Grid.Column="0" Grid.Row="5" Padding="2"  FontSize="12" Margin="5" Content="Genre"/>
     </Grid>
 </Window>
 
