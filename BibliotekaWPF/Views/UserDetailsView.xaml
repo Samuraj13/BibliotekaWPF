@@ -42,14 +42,14 @@
         <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Phone"  FontSize="14"/>
 
         <TextBlock Margin="5" Grid.Row="0" Grid.Column="3"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Actual borrowed" FontWeight="Bold" FontSize="14"/>
-        <DataGrid x:Name="ActualBorrows" Grid.Column="3"  Grid.Row="1" Grid.RowSpan="6" AutoGenerateColumns="false" IsReadOnly="true">
+        <DataGrid x:Name="ActualBorrows" Grid.Column="3"  Grid.Row="1" Grid.RowSpan="6" AutoGenerateColumns="false" IsReadOnly="true" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding BookTitle}"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <TextBlock Margin="5" Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Borrows history" FontWeight="Bold" FontSize="14"/>
-        <DataGrid x:Name="HistoryBorrows" Grid.Column="4"  Grid.Row="1" Grid.RowSpan="6" AutoGenerateColumns="False" IsReadOnly="true">
+        <DataGrid x:Name="HistoryBorrows" Grid.Column="4"  Grid.Row="1" Grid.RowSpan="6" AutoGenerateColumns="False" IsReadOnly="true" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding BookTitle}"/>
                 <DataGridTextColumn Header="Return Date" Binding="{Binding ReturnDate}"/>

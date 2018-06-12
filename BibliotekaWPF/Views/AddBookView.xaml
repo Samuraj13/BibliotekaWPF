@@ -18,9 +18,6 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="130*" />
@@ -36,9 +33,9 @@
         <DatePicker Grid.Column="1" Grid.Row="2" x:Name="ReleaseDate"  Margin="5,5,5,0"  VerticalAlignment="Top" />
         <TextBox Grid.Column="1" Grid.Row="3" x:Name="ISBN" Height="23" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
         <TextBox Grid.Column="1" Grid.Row="4" x:Name="Count"  Height="23" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
-        <Button Grid.Column="0" Grid.Row="6" x:Name="AddNewBook" Content="Add"  VerticalAlignment="Top"  Width="80" Height="30" IsDefault="True" Margin="5" />
-        <Button Grid.Column="0" Grid.Row="7" x:Name="Close" Content="Cancel" VerticalAlignment="Top"  Width="80" Height="30" IsCancel="True" Margin="5" />
-        <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="96" Width="206" Grid.RowSpan="3"/>
+        <Button Grid.Column="0" Grid.Row="6" x:Name="AddNewBook" Content="Add"  Width="80"  IsDefault="True" Margin="20,5,20,0" Height="35" VerticalAlignment="Top" />
+        <Button Grid.Column="0" Grid.Row="7" x:Name="Close" Content="Cancel" VerticalAlignment="Top"  Width="80" IsCancel="True" Margin="5" />
+        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Width="206" Grid.RowSpan="2"/>
         <ComboBox ItemsSource="{Binding BookGenres}"
                   SelectedItem="{Binding SelectedBookGenre, Mode=TwoWay}"
                   Width="120"  

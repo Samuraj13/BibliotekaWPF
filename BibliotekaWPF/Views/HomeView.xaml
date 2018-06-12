@@ -9,7 +9,7 @@
                    GlowBrush="{DynamicResource AccentColorBrush}"
                    BorderThickness="1"
       mc:Ignorable="d" 
-      Title="HomeView" Height="900" Width="1600" MinHeight="250" MinWidth="600" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" WindowState="Maximized" 
+      Title="Biblioteka" Height="900" Width="1600" MinHeight="250" MinWidth="600" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" WindowState="Maximized" 
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
 
