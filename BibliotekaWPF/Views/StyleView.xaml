@@ -10,24 +10,25 @@
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="200*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" Content="Styles"/>
-        <Button Content="Dark" Grid.Row="1" Grid.Column="0" x:Name="ChangeToDark"/>
-        <Button Content="Light" Grid.Row="2" Grid.Column="0" x:Name="ChangeToLight"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Styles" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <Button Content="Dark" Grid.Column="0" Grid.Row="1"  x:Name="ChangeToDark" HorizontalAlignment="Left" Margin="5"/>
+        <Button Content="Light" Grid.Column="0" Grid.Row="2" x:Name="ChangeToLight" HorizontalAlignment="Left" Margin="5"/>
 
-        <Label Grid.Row="0" Grid.Column="1" Content="Primary Color"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Background="transparent" VerticalAlignment="Center" x:Name="PrimaryColor" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Primary Color"/>
+        <ComboBox Grid.Row="4" VerticalAlignment="Stretch"  Padding="0" ItemsSource="{Binding Colors}" SelectedItem="{Binding SelectedColor, Mode=TwoWay}" SelectedIndex="0" Margin="5" Width="300" HorizontalAlignment="Left"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Primary Color" VerticalAlignment="Center" Margin="5"/>
 
     </Grid>
 </UserControl>

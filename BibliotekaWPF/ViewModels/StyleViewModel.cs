@@ -17,12 +17,41 @@ namespace BibliotekaWPF.ViewModels
 {
     public class StyleViewModel : Screen
     {
-
+        public static BindableCollection<string> Colors { get; set; } = new BindableCollection<string>();
         public StyleViewModel()
         {
+            Colors.Add("Yellow");
+            Colors.Add("Amber");
+            Colors.Add("DeepOrange");
+            Colors.Add("LightBlue");
+            Colors.Add("Teal");
+            Colors.Add("Cyan");
+            Colors.Add("Pink");
+            Colors.Add("Green");
+            Colors.Add("DeepPurple");
+            Colors.Add("Indigo");
+            Colors.Add("LightGreen");
+            Colors.Add("Blue");
+            Colors.Add("Lime");
+            Colors.Add("Red");
+            Colors.Add("Orange");
+            Colors.Add("Purple");
+            Colors.Add("BlueGrey");
+            Colors.Add("Grey");
+            Colors.Add("Brown");
 
         }
 
+        public string selectedColor;
+        public string SelectedColor
+        {
+            get { return selectedColor; }
+            set
+            {
+                selectedColor = value;
+                ReplacePrimaryColor(value);
+            }
+        }
         public void ChangeToDark()
         {
             SetLightDark(true);
@@ -31,16 +60,6 @@ namespace BibliotekaWPF.ViewModels
         public void ChangeToLight()
         {
             SetLightDark(false);
-        }
-
-        private string _primaryColor;
-
-        public string PrimaryColor
-        {
-            get { return _primaryColor; }
-            set { _primaryColor = value;
-                ReplacePrimaryColor(value);
-            }
         }
 
         private string _accentColor;

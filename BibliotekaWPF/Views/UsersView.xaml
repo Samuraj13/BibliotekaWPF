@@ -16,7 +16,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <ScrollViewer  VerticalScrollBarVisibility="Auto" Height="Auto">
-            <DataGrid x:Name="Users" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="auto">
+            <DataGrid x:Name="Users" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="auto" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="User Name" Binding="{Binding FullName}"/>
                     <DataGridTextColumn Header="Birth Date" Binding="{Binding BirthTime}"/>

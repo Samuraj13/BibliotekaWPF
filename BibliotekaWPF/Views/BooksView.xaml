@@ -15,7 +15,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <ScrollViewer  VerticalScrollBarVisibility="Auto" Height="Auto">
-            <DataGrid x:Name="Books" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="auto">            
+            <DataGrid x:Name="Books" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="auto" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="2">            
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
                     <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>

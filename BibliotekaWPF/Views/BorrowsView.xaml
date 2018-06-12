@@ -22,7 +22,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" >Books in borrow</TextBlock>
-        <DataGrid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" x:Name="AllActualBorrows" IsReadOnly="true">
+        <DataGrid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" x:Name="AllActualBorrows" IsReadOnly="true" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding BookTitle}"/>
                 <DataGridTextColumn Header="User Name" Binding="{Binding UserFullName}"/>
@@ -36,7 +36,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">Active users</TextBlock>
-        <DataGrid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" x:Name="AllActualUsers"  IsReadOnly="true">
+        <DataGrid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" x:Name="AllActualUsers"  IsReadOnly="true" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="User Name" Binding="{Binding UserFullName}"/>
                 <DataGridTemplateColumn>
