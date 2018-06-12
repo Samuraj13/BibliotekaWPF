@@ -48,7 +48,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>
-        <Button Grid.Row="1" Content="Add User" x:Name="LoadAddUserPage" HorizontalAlignment="Left"/>
-        <Button Grid.Row="1" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" Margin="95,0,0,0" AutomationProperties.AccessKey="Enter"/>
+        <Button Grid.Row="1" Content="Add User" x:Name="LoadAddUserPage" HorizontalAlignment="Left" Margin="5" />
+        <Button Grid.Row="1" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" Margin="100,5"  AutomationProperties.AccessKey="Enter"/>
     </Grid>
 </UserControl>
