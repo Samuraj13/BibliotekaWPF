@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         mc:Ignorable="d"
-        Title="Details" Height="300" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Details" Height="300" Width="800" WindowStartupLocation="CenterScreen"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -18,14 +18,14 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition  Height="40"/>
+            <RowDefinition  Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" MaxWidth="150"/>
             <ColumnDefinition Width="auto" MaxWidth="300"/>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition MinWidth="200" Width="*"/>
+            <ColumnDefinition MinWidth="200" Width="*" />
 
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Details" FontWeight="Bold" FontSize="14"/>
@@ -59,7 +59,7 @@
         </DataGrid>
 
 
-        <Button x:Name="DetailsClose" Content="Cancel" Grid.Column="3" Grid.Row="8" Width="80" Height="20" HorizontalAlignment="Right" Margin="0,2,20,3" IsCancel="True"/>
+        <Button x:Name="DetailsClose" Content="Cancel" Grid.Column="3" Grid.Row="8" Width="auto" Height="auto" HorizontalAlignment="Right" Margin="0,2,20,3" IsCancel="True"/>
 
 
 

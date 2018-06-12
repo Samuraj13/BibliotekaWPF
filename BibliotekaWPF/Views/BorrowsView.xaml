@@ -6,26 +6,23 @@
              xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="420" Height="420"
+             d:DesignHeight="420" Height="auto"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="auto" MinHeight="40"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="20" />
             <ColumnDefinition />
-            <ColumnDefinition Width="20"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" >Books in borrow</TextBlock>
-        <DataGrid Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" AutoGenerateColumns="False" x:Name="AllActualBorrows" IsReadOnly="true">
+        <TextBlock Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" >Books in borrow</TextBlock>
+        <DataGrid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" x:Name="AllActualBorrows" IsReadOnly="true">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding BookTitle}"/>
                 <DataGridTextColumn Header="User Name" Binding="{Binding UserFullName}"/>
@@ -38,8 +35,8 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBlock Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">Active users</TextBlock>
-        <DataGrid Grid.Column="4" Grid.Row="1" Grid.RowSpan="4" AutoGenerateColumns="False" x:Name="AllActualUsers"  IsReadOnly="true">
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">Active users</TextBlock>
+        <DataGrid Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="False" x:Name="AllActualUsers"  IsReadOnly="true">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="User Name" Binding="{Binding UserFullName}"/>
                 <DataGridTemplateColumn>
@@ -51,6 +48,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Column="2" Grid.Row="2" Content="New borrow" Height="Auto" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LoadAddBorrowPage"/>
+        <Button Grid.Column="1" Margin="20,5" Grid.Row="3" Content="New borrow" Height="Auto" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LoadAddBorrowPage"/>
     </Grid>
 </UserControl>

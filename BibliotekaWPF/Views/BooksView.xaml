@@ -6,16 +6,16 @@
              xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              mc:Ignorable="d" 
-             d:DesignWidth="900" Height="420"
+             d:DesignWidth="900" Height="auto"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <ScrollViewer  VerticalScrollBarVisibility="Auto" Height="Auto">
-            <DataGrid x:Name="Books" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="380">            
+            <DataGrid x:Name="Books" AutoGenerateColumns="False" Grid.Row="0" IsReadOnly="true" Height="auto">            
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
                     <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
@@ -42,7 +42,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>
-        <Button Grid.Row="1" Content="Add Book" x:Name="LoadAddBookPage" HorizontalAlignment="Left"/>
-        <Button Grid.Row="1" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" Margin="53,0,0,0" AutomationProperties.AccessKey="Enter"/>
+        <Button Grid.Row="1" Margin="5" Content="Add Book" x:Name="LoadAddBookPage" HorizontalAlignment="Left"/>
+        <Button Grid.Row="1" Margin="105,5" Content="Refresh" x:Name="Reload" HorizontalAlignment="Left" AutomationProperties.AccessKey="Enter"/>
     </Grid>
 </UserControl>
