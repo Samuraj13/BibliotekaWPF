@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         mc:Ignorable="d"
-        Title="AddBookView"  Height="300" Width="400" x:Name="AddBookPage" WindowStartupLocation="CenterScreen"
+        Title="AddBookView"  Height="350" Width="400" x:Name="AddBookPage" WindowStartupLocation="CenterScreen"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              Background="{DynamicResource MaterialDesignPaper}">
     <Grid >
@@ -28,12 +28,12 @@
         <Label Grid.Column="0" Grid.Row="2"  Padding="2"  FontSize="12" Margin="5" >Release Date</Label>
         <Label Grid.Column="0" Grid.Row="3"  Padding="2"  FontSize="12" Margin="5" >ISBN</Label>
         <Label Grid.Column="0" Grid.Row="4"  Padding="2"  FontSize="12" Margin="5" >Count</Label>
-        <TextBox Grid.Column="1" Grid.Row="0" x:Name="Title"  Margin="5,5,5,0" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.RowSpan="2" />
-        <TextBox Grid.Column="1" Grid.Row="1" x:Name="Author"  Margin="5,5,5,0"  TextWrapping="Wrap" VerticalAlignment="Top" />
-        <DatePicker Grid.Column="1" Grid.Row="2" x:Name="ReleaseDate"  Margin="5,5,5,0"  VerticalAlignment="Top" />
-        <TextBox Grid.Column="1" Grid.Row="3" x:Name="ISBN" Height="23" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
-        <TextBox Grid.Column="1" Grid.Row="4" x:Name="Count"  Height="23" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
-        <Button Grid.Column="0" Grid.Row="6" x:Name="AddNewBook" Content="Add"  Width="80"  IsDefault="True" Margin="20,5,20,0" Height="35" VerticalAlignment="Top" />
+        <TextBox Grid.Column="1" Grid.Row="0" x:Name="Title"  Margin="5" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.RowSpan="2" />
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="Author"  Margin="5"  TextWrapping="Wrap" VerticalAlignment="Top" />
+        <DatePicker Grid.Column="1" Grid.Row="2" x:Name="ReleaseDate"  Margin="5"  VerticalAlignment="Top" />
+        <TextBox Grid.Column="1" Grid.Row="3" x:Name="ISBN" Height="23" Margin="5" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox Grid.Column="1" Grid.Row="4" x:Name="Count"  Height="23" Margin="5" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <Button Grid.Column="0" Grid.Row="6" x:Name="AddNewBook" Content="Add"  Width="80"  IsDefault="True" Height="35" Margin="5" VerticalAlignment="Top" />
         <Button Grid.Column="0" Grid.Row="7" x:Name="Close" Content="Cancel" VerticalAlignment="Top"  Width="80" IsCancel="True" Margin="5" />
         <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Width="206" Grid.RowSpan="2"/>
         <ComboBox ItemsSource="{Binding BookGenres}"
