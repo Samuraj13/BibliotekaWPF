@@ -6,21 +6,38 @@
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Add new user" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddUserPage" Background="Yellow" WindowStartupLocation="CenterScreen">
-    <Grid Margin="10,10,10,10">
-        <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">First Name</TextBlock>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Last Name</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,56,234,149">Birth Date</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,79,234,126">Email</Label>
-        <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,102,234,101" Background="{x:Null}">Phone (Not required)</Label>
-        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
-        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="23" Margin="140,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <DatePicker x:Name="BirthTime" HorizontalAlignment="Left" Height="23" Margin="140,56,0,0" VerticalAlignment="Top" Width="206" FirstDayOfWeek="Monday" DisplayDateStart="1753-01-01"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="140,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <TextBox x:Name="Phone" HorizontalAlignment="Left" Height="23" Margin="140,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <Button x:Name="Add" Content="Add" Margin="40,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsDefault="True"/>
-        <Button x:Name="Close" Content="Cancel" Margin="40,155,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="20" IsCancel="True"/>
-        <TextBlock HorizontalAlignment="Left" Margin="140,130,0,0" TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="121" Width="206"/>
+        Title="Add new user" MinHeight="300" MinWidth="400" Height="300" Width="405" x:Name="AddUserPage" Background="Yellow" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"  />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*" />
+            <ColumnDefinition Width="293*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,0,0,93">First Name</Label>
+        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,23,0,70">Last Name</Label>
+        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,46,0,47" >Birth Date</Label>
+        <Label Grid.Column="0" Foreground="Black" Padding="2"  FontSize="12" Margin="5,69,0,24" >Email</Label>
+        <Label Grid.Column="0" Foreground="Black" Padding="2" MinWidth="120" FontSize="12" Background="{x:Null}" Margin="5,92,0,0">Phone (Not required)</Label>
+        <Button Grid.Column="0" x:Name="Add" Content="Add" VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" Height="auto" IsDefault="True" Margin="10,30,0,-47" Grid.Row="7"/>
+        <Button Grid.Column="0" x:Name="Close" Content="Cancel"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" Height="auto" IsCancel="True" Margin="10,63,0,-87" Grid.Row="7"/>
+        <TextBox Grid.Column="1" x:Name="FirstName" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
+        <TextBox Grid.Column="1" x:Name="LastName" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Margin="0,23,0,0"/>
+        <DatePicker Grid.Column="1"  x:Name="BirthTime" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="206" FirstDayOfWeek="Monday" DisplayDateStart="1753-01-01" Margin="0,46,0,0"/>
+        <TextBox Grid.Column="1" x:Name="Email" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Margin="0,69,0,0"/>
+        <TextBox Grid.Column="1" x:Name="Phone" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Margin="0,92,0,0"/>
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left"  TextWrapping="Wrap" x:Name="Error" VerticalAlignment="Top" Height="124" Width="206" Margin="0,1,0,-118" Grid.Row="7"/>
+
+
 
     </Grid>
 </Window>
