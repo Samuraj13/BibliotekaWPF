@@ -6,7 +6,9 @@
              xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Background="Green">
+             d:DesignHeight="300" d:DesignWidth="300" 
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <DataGrid x:Name="BorrowedBook" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="Auto" AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>

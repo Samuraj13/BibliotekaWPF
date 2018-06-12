@@ -6,7 +6,9 @@
              xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
              xmlns:local="clr-namespace:BibliotekaWPF.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="420" d:DesignWidth="Auto" Background="Green" Height="420">
+             d:DesignHeight="420" Height="420"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>

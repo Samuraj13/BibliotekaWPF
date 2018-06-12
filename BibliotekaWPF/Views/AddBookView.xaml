@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         mc:Ignorable="d"
-        Title="AddBookView" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddBookPage" Background="Red" WindowStartupLocation="CenterScreen">
+        Title="AddBookView" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddBookPage" WindowStartupLocation="CenterScreen"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid Margin="10,10,10,10">
         <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">Title</TextBlock>
         <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Author</Label>

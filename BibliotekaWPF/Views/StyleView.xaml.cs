@@ -1,5 +1,4 @@
-﻿using MahApps.Metro.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace BibliotekaWPF.Views
 {
     /// <summary>
-    /// Interaction logic for DeleteView.xaml
+    /// Interaction logic for StyleView.xaml
     /// </summary>
-    public partial class DeleteView : MetroWindow
+    public partial class StyleView : UserControl
     {
-        public DeleteView()
+        public StyleView()
         {
             InitializeComponent();
         }

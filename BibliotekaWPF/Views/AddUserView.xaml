@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Add new user" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddUserPage" Background="Yellow" WindowStartupLocation="CenterScreen">
+        Title="Add new user" ResizeMode="NoResize" Height="300" Width="400" x:Name="AddUserPage" WindowStartupLocation="CenterScreen"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid Margin="10,10,10,10">
         <TextBlock Foreground="Black" Padding="2"  FontSize="12" Margin="10,10,234,195">First Name</TextBlock>
         <Label Foreground="Black" Padding="2"  FontSize="12" Margin="10,33,234,173">Last Name</Label>

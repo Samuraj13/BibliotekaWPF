@@ -7,7 +7,9 @@
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         xmlns:cw="http://schemas.cubewerx.com/namespaces/null"
         mc:Ignorable="d"
-        Title="AddBorrowView" Height="400" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Green" WindowStartupLocation="CenterScreen">
+        Title="AddBorrowView" Height="400" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
 
         <Grid.RowDefinitions>

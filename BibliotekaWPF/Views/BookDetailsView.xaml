@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliotekaWPF.Views"
         mc:Ignorable="d"
-        Title="Details" Height="300" Width="800" Background="Red" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Details" Height="300" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
