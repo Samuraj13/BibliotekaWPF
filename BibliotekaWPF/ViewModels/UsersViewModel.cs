@@ -65,7 +65,7 @@ namespace BibliotekaWPF.ViewModels
             Reload();
         }
 
-        private void Reload()
+        public void Reload()
         {
             Users = UserServices.GetAll();
             NotifyOfPropertyChange(() => Users);
