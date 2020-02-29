@@ -16,7 +16,7 @@ namespace BibliotekaWPF.Data
         public LibraryContext()
             : base("name=LibraryContext")
         {
-            //Database.SetInitializer(new LibraryDBInitializer());
+            Database.SetInitializer(new LibraryDBInitializer());
         }
         public DbSet<Book> Books { get; set; }
         public DbSet<User> Users { get; set; }
